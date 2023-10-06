@@ -1,5 +1,5 @@
 # analytic-geometry-triangles
-[![Go](https://pkg.go.dev/badge/github.com/cantevenread/analytic-geometry-triangles.svg)](https://pkg.go.dev/github.com/cantevenread/analytic-geometry-triangles) \n
+![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white) <br>
 find distance, median line, type of triangle, midpoints and midpoint segments
 
 ### Change Log

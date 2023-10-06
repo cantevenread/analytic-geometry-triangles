@@ -21,5 +21,11 @@ func main() {
     fmt.Println("Distance between A and B:","√", distanceAB.Answer)
     fmt.Println("Distance between B and C:","√", distanceBC.Answer)
     fmt.Println("Distance between C and A:","√", distanceCA.Answer)
+
+    fmt.Println("------------------------------------------------------------")
+
+    fmt.Println("Midpoint of line A and B:", internal.FindMidpoint(pointA, pointB))
+    fmt.Println("Midpoint of line B and C:", internal.FindMidpoint(pointB, pointC))
+    fmt.Println("Midpoint of line C and A:", internal.FindMidpoint(pointC, pointA))
 }
 

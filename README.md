@@ -1,2 +1,2 @@
 # analytic-geometry-triangles
-find distance, median line, type of triangle, midpoints
+find distance, median line, type of triangle, midpoints and midpoint segments

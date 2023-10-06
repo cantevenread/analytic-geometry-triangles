@@ -23,9 +23,10 @@ func main() {
 	fmt.Printf("Distance between A and B: √%f or %.2f\n", distanceAB.Answer, distanceAB.SqrAnswer)
 	fmt.Printf("Distance between B and C: √%f or %.2f\n", distanceBC.Answer, distanceBC.SqrAnswer)
 	fmt.Printf("Distance between C and A: √%f or %.2f\n", distanceCA.Answer, distanceCA.SqrAnswer)
-    fmt.Printf("Distance between Midpoint AB to Midpoint BC √%f or %.2f\n", internal.FindDistance(internal.FindMidpoint(pointA, pointB), internal.FindMidpoint(pointB, pointC)).Answer, internal.FindDistance(internal.FindMidpoint(pointA, pointB), internal.FindMidpoint(pointB, pointC)).SqrAnswer)
-    fmt.Println("Distance Between Midpoint AB to Midpoint CA √", internal.FindDistance(internal.FindMidpoint(pointA, pointB), internal.FindMidpoint(pointC, pointA)).Answer)
-    fmt.Println("Distance Between Midpoint BC to Midpoint CA √", internal.FindDistance(internal.FindMidpoint(pointB, pointC), internal.FindMidpoint(pointC, pointA)).Answer)
+    fmt.Printf("Perimiter of triangle: %.2f\n", internal.FindPerimeter(distanceAB, distanceBC, distanceCA))
+    fmt.Printf("Distance between Midpoint AB to Midpoint BC: √%f or %.2f\n", internal.FindDistance(internal.FindMidpoint(pointA, pointB),internal.FindMidpoint(pointB, pointC)).Answer, internal.FindDistance(internal.FindMidpoint(pointA, pointB),internal.FindMidpoint(pointB, pointC)).SqrAnswer)
+    fmt.Printf("Distance between Midpoint AB to Midpoint CA: √%f or %.2f\n", internal.FindDistance(internal.FindMidpoint(pointA, pointB),internal.FindMidpoint(pointC, pointA)).Answer, internal.FindDistance(internal.FindMidpoint(pointA, pointB),internal.FindMidpoint(pointC, pointA)).SqrAnswer)
+    fmt.Printf("Distance between Midpoint BC to Midpoint CA: √%f or %.2f\n", internal.FindDistance(internal.FindMidpoint(pointB, pointC),internal.FindMidpoint(pointC, pointA)).Answer, internal.FindDistance(internal.FindMidpoint(pointB, pointC),internal.FindMidpoint(pointC, pointA)).SqrAnswer)
 
 	fmt.Println("------------------------------------------------------------")
 
@@ -43,5 +44,8 @@ func main() {
     fmt.Println("Slope of Midpoint AB to Midpoint CA: ", internal.FormatSlope(internal.FindSlope(internal.FindMidpoint(pointA, pointB), internal.FindMidpoint(pointC, pointA))))
     fmt.Println("Slope of Midpoint BC to Midpoint CA: ", internal.FormatSlope(internal.FindSlope(internal.FindMidpoint(pointB, pointC), internal.FindMidpoint(pointC, pointA))))
 
-    fmt.Println("Negative reciprocal of slope A to B", internal.FormatSlope(internal.SlopeReciprocal(internal.FindSlope(pointA, pointB))))
+    fmt.Println("Negative reciprocal of slope A to B", internal.FormatSlope(internal.SlopeReciprocal(internal.Slope{Rise: -1, Run: 1})))
+
+    test := internal.Slope{Rise: -1, Run: -1}
+    fmt.Println("Test", internal.FormatSlope(internal.FormatNegativeSlope(test)))
 }

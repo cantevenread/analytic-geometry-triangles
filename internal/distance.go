@@ -15,3 +15,7 @@ func FindDistance(p1, p2 Point) Distance {
     eq3 := eq1*eq1 + eq2*eq2
     return Distance{Answer: eq3, SqrAnswer: math.Sqrt(eq3)}
 }
+
+func FindPerimeter(d1,d2,d3 Distance) float64 {
+    return d1.SqrAnswer + d2.SqrAnswer + d3.SqrAnswer
+}

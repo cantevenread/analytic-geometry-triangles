@@ -11,6 +11,19 @@ func FormatSlope(slope Slope) string {
 	return formatted
 }
 
+func FormatNegativeSlope(s Slope) Slope {
+    if s.Rise < 0 {
+        if s.Run < 0 {
+            newslope :=  Slope{
+                Rise: -s.Rise,
+                Run: -s.Run,
+            }
+            return newslope
+        }
+    }
+    return Slope{Rise: s.Rise, Run: s.Run}
+}
+
 func FindSlope(p1, p2 Point) Slope {
 	return Slope{Rise: p2.Y - p1.Y, Run: p2.X - p1.X}
 }

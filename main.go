@@ -32,7 +32,7 @@ func main() {
 
 	fmt.Println("------------------------------------------------------------")
 
-    fmt.Println("Slopes are not reduced or account for double negatives or denominator negatives.")
+    fmt.Println("Slopes are not reduced or account for double negatives")
 	fmt.Println("Slope of A to B: ", internal.FormatSlope(internal.FindSlope(pointA, pointB)))
 	fmt.Println("Slope of B to C: ", internal.FormatSlope(internal.FindSlope(pointB, pointC)))
 	fmt.Println("Slope of C to A: ", internal.FormatSlope(internal.FindSlope(pointC, pointA)))

@@ -18,9 +18,9 @@ func main() {
 
     fmt.Println("------------------------------------------------------------")
 
-    fmt.Println("Distance between A and B:","√", distanceAB.Answer)
-    fmt.Println("Distance between B and C:","√", distanceBC.Answer)
-    fmt.Println("Distance between C and A:","√", distanceCA.Answer)
+    fmt.Printf("Distance between A and B: √%f or %.2f\n", distanceAB.Answer,distanceAB.SqrAnswer)
+    fmt.Printf("Distance between B and C: √%f or %.2f\n", distanceBC.Answer,distanceBC.SqrAnswer)
+    fmt.Printf("Distance between C and A: √%f or %.2f\n", distanceCA.Answer,distanceCA.SqrAnswer)
 
     fmt.Println("------------------------------------------------------------")
 

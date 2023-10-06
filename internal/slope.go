@@ -14,3 +14,10 @@ func FormatSlope(slope Slope) string {
 func FindSlope(p1, p2 Point) Slope {
 	return Slope{Rise: p2.Y - p1.Y, Run: p2.X - p1.X}
 }
+
+func SlopeReciprocal(slope Slope) Slope {
+    return Slope{
+        Rise: -slope.Run,
+        Run: slope.Rise,
+    }
+}

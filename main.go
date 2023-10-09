@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+    internal.Gui()
 	fmt.Println("Enter coordinates for Point A:")
 	pointA := internal.ReadPoint()
 	fmt.Println("Enter coordinates for Point B:")
@@ -46,6 +47,6 @@ func main() {
 
     fmt.Println("Negative reciprocal of slope A to B", internal.FormatSlope(internal.SlopeReciprocal(internal.Slope{Rise: -1, Run: 1})))
 
-    test := internal.Slope{Rise: -1, Run: -1}
-    fmt.Println("Test", internal.FormatSlope(internal.FormatNegativeSlope(test)))
+    test := internal.Slope{Rise: 2, Run: 1}
+    fmt.Println("Test", internal.FormatSlope(internal.FormatNegativeSlope(internal.SlopeReciprocal(test))))
 }
